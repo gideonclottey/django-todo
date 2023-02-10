@@ -9,8 +9,10 @@ class  Task(models.Model):
     complete =models.BooleanField(default=False)
     created =models.DateTimeField(auto_now_add=True)
 
+    #Gives string representation of the object
     def __str__(self) -> str:
         return  self.title
     
+    # Any complete items will go down the bottom of the table
     class Meta:
         ordering =['complete']
